@@ -1,0 +1,162 @@
+.header {
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #fff; */
+    background-color: var(--bg-color);
+    color: #fff;
+    box-shadow: 0 0.5rem 1.52rem rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoImg {
+    width: 1.5rem;
+    height: 1.6rem;
+    cursor: pointer;
+}
+
+.heading {
+    color: rgb(23, 217, 217);
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.heading:hover {
+    text-decoration: underline;
+}
+
+
+.navList {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navList li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.navList .active::after {
+    position: absolute;
+    content: "";
+    bottom: -23px;
+    left: 0;
+    width: 0;
+    height: 2.2px;
+    background: #ddd;
+    transition: width 0.3s ease;
+    /* Smooth transition for the width property */
+}
+
+.navList li.active::after {
+    width: 100%;
+}
+
+.navList li:hover a {
+    color: var(--primary-color);
+}
+
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.goBack,
+.settings {
+    margin-left: 20px;
+    outline: none;
+    border: none;
+    width: 35px;
+    height: 35px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.goBack a,
+.settings a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.icon {
+    color: #fff;
+    width: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+
+.settings:hover .icon {
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn_menu {
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: var(--primary-color);
+    border-radius: 5px;
+    margin-left: 20px;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .navList {
+        display: none;
+    }
+
+    .btn_menu {
+        display: block;
+    }
+}
+
+.menu {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+}

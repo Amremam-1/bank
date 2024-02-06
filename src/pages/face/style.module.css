@@ -1,0 +1,133 @@
+.main_face {
+    background-color: #200F23;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.centerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.img {
+    width: 55px;
+    height: 90px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logo {
+    width: 35px;
+    height: 40px;
+}
+
+.heading {
+    color: var(--primary-color);
+    font-size: 50px;
+    z-index: 100;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Add a pulsating effect to the link */
+.heading {
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Apply a subtle text-shadow on hover */
+.heading:hover {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.shap1 {
+    position: absolute;
+    top: 250px;
+    right: -180px;
+    width: 576px;
+    height: 90px;
+    border-radius: 60px;
+    background: linear-gradient(179.75deg, #FF00A8 -2.26%, #7205FF 121.15%);
+    transform: rotate(-50deg);
+}
+
+.shap2 {
+    position: absolute;
+    top: 250px;
+    left: -180px;
+    width: 576px;
+    height: 90px;
+    border-radius: 60px;
+    background: linear-gradient(179.75deg, #FF00A8 -2.26%, #7205FF 121.15%);
+    transform: rotate(-50deg);
+}
+
+.shap3 {
+    position: absolute;
+    top: 0;
+    right: 25%;
+    width: 576px;
+    height: 90px;
+    border-radius: 60px;
+    background: rgba(29, 209, 188, 1);
+    transform: rotate(25deg);
+}
+
+.shap4 {
+    position: absolute;
+    bottom: 0;
+    right: 35%;
+    width: 576px;
+    height: 90px;
+    border-radius: 60px;
+    background: rgba(29, 209, 188, 1);
+    transform: rotate(25deg);
+}
+
+.shap1,
+.shap2,
+.shap3,
+.shap4 {
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition on transform */
+}
+
+.shap1:hover,
+.shap2:hover {
+    transform: rotate(-60deg);
+    /* Adjust the transform value as needed */
+}
+
+.shap3:hover,
+.shap4:hover {
+    transform: rotate(40deg);
+}
