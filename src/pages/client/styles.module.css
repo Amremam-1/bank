@@ -1,0 +1,95 @@
+    .parent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: -webkit-linear-gradient(45deg, #49a09d, #5f2c82);
+    }
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-height: 600px;
+        overflow-y: scroll;
+        margin-top: 100px;
+        /* -webkit-transform: translate(-50%, -50%); */
+        transform: translate(-50%, -50%);
+
+        background: -webkit-linear-gradient(45deg, #49a09d, #5f2c82);
+        background: linear-gradient(45deg, #49a09d, #5f2c82);
+    }
+
+    table {
+        width: 1200px;
+        height: 1000px;
+        border-collapse: collapse;
+        overflow: hidden;
+        overflow-y: scroll;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    th {
+        position: sticky;
+        top: 0;
+        background-color: #55608f;
+        /* يمكنك تحديد لون الخلفية الخاص برأس الجدول هنا */
+        z-index: 100;
+        /* لضمان ظهور رأس الجدول فوق المحتوى أثناء التمرير */
+    }
+
+    th,
+    td {
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        position: sticky;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    thead th {
+        background-color: #55608f;
+    }
+
+    tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    tbody td {
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+    tbody td:hover:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: -1;
+    }
+
+    .container::-webkit-scrollbar {
+        width: 12px;
+        /* عرض شريط التمرير */
+    }
+
+    .container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        /* لون المسار */
+    }
+
+    .container::-webkit-scrollbar-thumb {
+        background: #888;
+        /* لون شريط التمرير */
+    }
+
+    .container::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        /* لون شريط التمرير عندما يتم التمرير فوقه */
+    }
